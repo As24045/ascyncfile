@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // async function getData(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() =>{
+        //             resolve(455)
+        //         }, 2000);
+        //     })
+        // }
+        //     async function main() {
+        //         console.log("data1");
+        //         console.log("data2");
+        //         console.log("data3");
+        //         let data = await getData()
+        //         console.log(data)
+        //         console.log("data4");
+        //     }
+        //     main()
+
+    //    let weatherApi=" https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=b0603799f4bfbbdb7562dc475f8135fc"
+
+    // async function data() {
+    // let response = await fetch(weatherApi)
+    // let value1 = await response.json()
+    //     console.log(value1.wind.speed);
+    //     console.log(value1.name);
+    // }
+    // data()
+
+    let newsApi ="https://newsapi.org/v2/everything?q=india&from=2024-02-03&sortBy=publishedAt&apiKey=ae37941494d24e33addd7a49e1dd014e";
+    async function newsData() {
+    let response = await fetch(newsApi);
+    let velue2 = await response.json()
+    console.log(velue2.articles);
+    console.log(velue2.articles.author);
+    console.log(velue2.element.map().title);
+}
+newsData()
+
+
+    </script>
+</body>
+</html>
